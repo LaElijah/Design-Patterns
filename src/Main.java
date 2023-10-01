@@ -4,11 +4,17 @@
 
 public class Main {
     public static void main(String[] args)  {
-        System.out.println("Hello, World!");
 
-        User user = new User("Elijah");
+        User user = new User("Elijah", 20);
 
-        System.out.println(user.name);
         user.sayHello();
+
+        TaxCalculator calculator = getCalculator2022();
+        calculator.calculateTax();
+
+    }
+
+    public static TaxCalculator getCalculator2022() {
+        return new TaxCalculator2022();
     }
 }
